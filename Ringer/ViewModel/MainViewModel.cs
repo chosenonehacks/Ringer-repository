@@ -20,49 +20,28 @@ namespace Ringer.ViewModel
     /// </para>
     /// </summary>
     public class MainViewModel : ViewModelBase
-    {
-        /// <summary>
-        /// Initializes a new instance of the MainViewModel class.
-        /// </summary>
+    {        
         public MainViewModel()
         {
             
         }
 
-        /// <summary>
-        /// The <see cref="MediaElementObject" /> property's name.
-        /// </summary>
-        //public const string MediaElementObjectPropertyName = "MediaElementObject";
-
+        
         private MediaElement _mediaElementObject = new MediaElement();
 
-        /// <summary>
-        /// Sets and gets the MediaElementObject property.
-        /// Changes to that property's value raise the PropertyChanged event. 
-        /// </summary>
         public MediaElement MediaElementObject
         {
-            get
-            {
-                return _mediaElementObject;
-            }
-
-            set
-            {
-                if (_mediaElementObject == value)
-                {
-                    return;
-                }                
+            get { return _mediaElementObject; }
+            set 
+            { 
                 _mediaElementObject = value;
-                RaisePropertyChanged(() => MediaElementObject);
+                RaisePropertyChanged("MediaElementObject");
             }
         }
 
         private RelayCommand<string> _playCommand;
 
-        /// <summary>
-        /// Gets the PlayCommand.
-        /// </summary>
+        
         public RelayCommand<string> PlayCommand
         {
             get
@@ -78,12 +57,10 @@ namespace Ringer.ViewModel
 
         private async Task Play(string sound)
         {
-            string source = string.Format("ms-appx:///Assets/{0}.mp3", sound.ToString());
-            MediaElementObject.Source = null;
-            MediaElementObject.Source = new Uri(source);
-            MediaElementObject.AutoPlay = true;
-            MediaElementObject.Volume = 15;
+            string source = string.Format("ms-appx:///Assets/Sounds/{0}.mp3", sound.ToString());
 
+            MediaElementObject.Source = new Uri(source);
+            
             await MediaElementObject.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
                 MediaElementObject.Stop();

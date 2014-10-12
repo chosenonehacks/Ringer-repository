@@ -28,22 +28,50 @@
                Source="../Assets/door.jpg" />
 
             <!-- Title-->
-            <TextBlock Text="Sounds in a Universal MVVM App"
+            <TextBlock Text="Ring a door bell or record your own"
                    Style="{StaticResource SubheaderTextBlockStyle}"
                    Margin="20"
-                   Foreground="Yellow" />
+                   Foreground="White" />
             <StackPanel Margin="15" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">
                 <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Grid.Row="0">
                     <Button Grid.Column="0" Command="{Binding PlayCommand}" CommandParameter="Door_Bell" Height="75" >
                         <Button.Background>
                             <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/appbar.control.play.png" />
                         </Button.Background>
                     </Button>
                     <TextBlock Padding="5" Grid.Column="1" Text="Bell 1" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="1">
+                        <Button Grid.Column="0" Command="{Binding PlayCommand}" CommandParameter="Doorbell" Height="75" >
+                            <Button.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/appbar.control.play.png" />
+                            </Button.Background>
+                        </Button>
+                        <TextBlock Padding="5" Grid.Column="1" Text="Bell 2" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="2">
+                        <Button Grid.Column="0" Command="{Binding PlayCommand}" CommandParameter="Store_Door" Height="75" >
+                            <Button.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/appbar.control.play.png" />
+                            </Button.Background>
+                        </Button>
+                        <TextBlock Padding="5" Grid.Column="1" Text="Bell 3" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="3">
+                        <Button Grid.Column="0" Command="{Binding PlayCommand}" CommandParameter="Two_Tone_Doorbell" Height="75" >
+                            <Button.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/appbar.control.play.png" />
+                            </Button.Background>
+                        </Button>
+                        <TextBlock Padding="5" Grid.Column="1" Text="Bell 4" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                    </StackPanel>
                 </Grid>
                 
                 
