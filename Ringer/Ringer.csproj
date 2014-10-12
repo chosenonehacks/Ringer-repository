@@ -96,7 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\appbar.control.play.png" />
-    <Content Include="Assets\door.jpg" />
+    <Content Include="Assets\doorhd.jpg" />
     <Content Include="Assets\Logo.scale-240.png" />
     <Content Include="Assets\SmallLogo.scale-240.png" />
     <Content Include="Assets\Sounds\Doorbell.mp3" />
@@ -119,6 +119,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AppPromo">
+      <HintPath>..\packages\AppPromo.1.0.0.9\lib\wpa81\AppPromo.winmd</HintPath>
+    </Reference>
     <Reference Include="GalaSoft.MvvmLight">
       <HintPath>..\packages\MvvmLightLibs.5.0.0.1\lib\wpa81\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>

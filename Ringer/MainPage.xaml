@@ -25,7 +25,7 @@
                Grid.RowSpan="3"
                HorizontalAlignment="Center"
                VerticalAlignment="Center"
-               Source="../Assets/door.jpg" />
+               Source="../Assets/doorhd.jpg" />
 
             <!-- Title-->
             <TextBlock Text="Ring a door bell or record your own"
