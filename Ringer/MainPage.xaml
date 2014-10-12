@@ -28,7 +28,7 @@
                Source="../Assets/doorhd.jpg" />
 
             <!-- Title-->
-            <TextBlock Text="Ring a door bell or record your own"
+            <TextBlock x:Uid="HeaderText"
                    Style="{StaticResource SubheaderTextBlockStyle}"
                    Margin="20"
                    Foreground="White" />
@@ -46,7 +46,7 @@
                             <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/appbar.control.play.png" />
                         </Button.Background>
                     </Button>
-                    <TextBlock Padding="5" Grid.Column="1" Text="Bell 1" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                    <TextBlock Padding="5" Grid.Column="1" x:Uid="Bell1" Style="{StaticResource SubheaderTextBlockStyle}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Grid.Row="1">
                         <Button Grid.Column="0" Command="{Binding PlayCommand}" CommandParameter="Doorbell" Height="75" >
@@ -54,7 +54,7 @@
                                 <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/appbar.control.play.png" />
                             </Button.Background>
                         </Button>
-                        <TextBlock Padding="5" Grid.Column="1" Text="Bell 2" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        <TextBlock Padding="5" Grid.Column="1" x:Uid="Bell2" Style="{StaticResource SubheaderTextBlockStyle}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Grid.Row="2">
                         <Button Grid.Column="0" Command="{Binding PlayCommand}" CommandParameter="Store_Door" Height="75" >
@@ -62,7 +62,7 @@
                                 <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/appbar.control.play.png" />
                             </Button.Background>
                         </Button>
-                        <TextBlock Padding="5" Grid.Column="1" Text="Bell 3" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        <TextBlock Padding="5" Grid.Column="1" x:Uid="Bell3" Style="{StaticResource SubheaderTextBlockStyle}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Grid.Row="3">
                         <Button Grid.Column="0" Command="{Binding PlayCommand}" CommandParameter="Two_Tone_Doorbell" Height="75" >
@@ -70,7 +70,7 @@
                                 <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/appbar.control.play.png" />
                             </Button.Background>
                         </Button>
-                        <TextBlock Padding="5" Grid.Column="1" Text="Bell 4" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        <TextBlock Padding="5" Grid.Column="1" x:Uid="Bell4" Style="{StaticResource SubheaderTextBlockStyle}"/>
                     </StackPanel>
                 </Grid>
                 
